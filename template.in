@@ -1,0 +1,40 @@
+###
+### sample input parameter file for lambda expression generation
+###
+### note: pop_size and max_generations must match 
+###       MAXPOP and MAXGEN defined in app.h
+###       (MAXPOP = pop_size, MAXGEN = max_generations + 1)
+###
+### XXX: MAXPOP and MAXGEN should be take from this parameter file.
+###
+
+pop_size = 1000
+max_generations = 999
+random_seed = $SEEDBASE$TRIAL
+
+output.basename = $FILEBASE$TRIAL
+
+# how to generate the initial population
+init.method = half_and_half
+init.depth = 2-20
+
+checkpoint.interval = 50
+
+# limits on tree size.
+max_depth = 30
+
+## breeding parameters
+
+breed_phases = 4
+
+breed[1].operator = reproduction, select=best
+breed[1].rate = 0.01
+
+breed[2].operator = reproduction, select=fitness
+breed[2].rate = 0.09
+
+breed[3].operator = crossover, select=fitness
+breed[3].rate = 0.899
+
+breed[4].operator = mutation, select=fitness
+breed[4].rate = 0.001

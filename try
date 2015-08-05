@@ -1,0 +1,26 @@
+#!/bin/sh
+case $# in
+  3) ;;
+  *) echo "usage: `basename $0` <file base name> <seed base#> <#iteration>" 1>&2
+     exit 2 ;;
+esac
+filebase=$1
+seedbase=$2
+numiter=$3
+
+trial=0
+while [ $trial -lt $numiter ]; do
+  trialstr=`printf "%03d" $trial`
+  # create input file from template
+  sed "s/\$SEEDBASE/$seedbase/;s/\$FILEBASE/$filebase/;s/\$TRIAL/$trialstr/" template.in > in.$filebase$trialstr
+  echo '/CPS' | ./gp -f in.$filebase$trialstr
+  # hope it finishes without problems
+  # gzip big files
+  gzip $filebase$trialstr.his $filebase$trialstr.sys pgplot.ps
+  # move all to subdirectory
+  mkdir d.$filebase$trialstr
+  mv pgplot.ps.gz in.$filebase$trialstr $filebase$trialstr.* d.$filebase$trialstr
+  rm -f gp*.ckp
+  trial=`expr $trial + 1`
+done
+exit 0
