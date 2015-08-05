@@ -5,6 +5,12 @@
 # "make clean" to delete object code.
 #
 
+#
+#  Modified to try finding the f(x) = 2x function
+#  Kazuto Tominaga <tomi@acm.org>
+#  December 7, 2002
+#
+
 KERNELDIR = ../../kernel
 CC = gcc
 CFLAGS = -g -I/usr/local/include

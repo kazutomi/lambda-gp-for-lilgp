@@ -1,6 +1,8 @@
 /*
- * liblambda.h - user header file 
- * $Id: lambda.h,v 1.1.1.1 2002/12/07 08:59:48 tominaga Exp $
+ * lambda.h - user header file
+ *
+ * Copyright (c) 2002 Kazuto Tominaga.  All rights reserved.
+ *
  */
 
 #ifndef __LAMBDA_H

@@ -25,6 +25,12 @@
  *  
  */
 
+/*
+ *  Modified to try finding the f(x) = 2x function
+ *  Kazuto Tominaga <tomi@acm.org>
+ *  July 10, 2003
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

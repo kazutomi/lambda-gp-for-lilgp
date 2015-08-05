@@ -25,6 +25,12 @@
  *  
  */
 
+/*
+ *  Modified to try finding the f(x) = 2x function
+ *  Kazuto Tominaga <tomi@acm.org>
+ *  July 10, 2003
+ */
+
 #ifndef _APP_H
 #define _APP_H
 

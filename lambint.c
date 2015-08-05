@@ -1,3 +1,10 @@
+/*
+ * lambint.c - internal routines for the lambda library
+ *
+ * Copyright (c) 2002 Kazuto Tominaga.  All rights reserved.
+ *
+ */
+
 #include <stdio.h>
 #include <assert.h>
 

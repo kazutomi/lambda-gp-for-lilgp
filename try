@@ -1,4 +1,8 @@
 #!/bin/sh
+#
+# try - execute multiple runs by gp (lilgp)
+#
+
 case $# in
   3) ;;
   *) echo "usage: `basename $0` <file base name> <seed base#> <#iteration>" 1>&2

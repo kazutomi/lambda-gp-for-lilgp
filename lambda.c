@@ -1,7 +1,8 @@
 /*
- * liblambda.c - lambda calculus engine in C
+ * lambda.c - lambda calculus engine in C
  *
- * $Id: lambda.c,v 1.5 2003/07/09 11:21:24 tominaga Exp $
+ * Copyright (c) 2003 Kazuto Tominaga.  All rights reserved.
+ *
  */
 
 /*

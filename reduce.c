@@ -1,3 +1,10 @@
+/*
+ * reduce.c - interactive utility to beta-reduce lambda expressions
+ *
+ * Copyright (c) 2003 Kazuto Tominaga.  All rights reserved.
+ *
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
